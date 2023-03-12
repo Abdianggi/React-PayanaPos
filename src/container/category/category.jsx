@@ -7,7 +7,7 @@ class category extends Component {
         categories: []
     }
 
-    getDataApi = () => {
+    getDataApi = function() {
         fetch('https://localhost/Payana/public/api/category')
         .then(response => response.json())
         // .then(json => console.log(json.data))
