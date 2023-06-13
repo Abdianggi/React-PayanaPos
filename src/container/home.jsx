@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import Category from "../../component/category/category";
+import Category from "../component/category/category";
 
 class category extends Component {
     state = {
@@ -22,7 +22,7 @@ class category extends Component {
         fetch(`https://localhost/Payana/public/api/category/destroy/${data}`, { method: 'DELETE' })
         .then(response => response.json())
         .then((res) => {
-            console.log(res);
+            // console.log(res);
             alert(res.message);
             this.getDataApi();
         });
@@ -30,6 +30,7 @@ class category extends Component {
 
     componentDidMount(){
         this.getDataApi()
+
     }
     
     render() {

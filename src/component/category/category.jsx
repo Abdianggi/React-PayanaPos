@@ -1,14 +1,25 @@
 import React from "react";
+import $ from "jquery";
 
 const Category = (props) => {
+    const handleLayla = () =>{
+        $('.layla').on('click', function() {
+            console.log('layla')
+        })
+    }
+
+    handleLayla()
+
     return (
         <div className="mx-5 mt-3">
             <div
                 className="flex flex-col rounded-lg bg-white shadow-lg dark:bg-neutral-700 md:max-w-xl md:flex-row">
-                <img
-                className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                src={props.data.image}
-                alt="" />
+                <div className="layla cursor-pointer">
+                    <img
+                    className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg "
+                    src={'https://localhost/Payana/public/'+props.data.image}
+                    alt="" />
+                </div>
                 <div className="flex flex-col justify-start p-6">
                 <h5 className="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
                     {props.data.name}
